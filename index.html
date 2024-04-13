@@ -29,6 +29,15 @@
       .font-inter {
         font-family: "Inter", sans-serif;
       }
+      li {
+        display: flex;
+        justify-content: space-between;
+      }
+      li p {
+        color: rgba(3, 7, 18, 0.6);
+        font-style: normal;
+        font-weight: 500;
+      }
     </style>
   </head>
   <body>
@@ -80,7 +89,7 @@
         </div>
         <div class="navbar-end">
           <button
-            class="btn bg-[rgba(29,209,0,0.10)] border-[rgba(29,209,0,0.40)] rounded-xl"
+            class="btn bg-[rgba(29,209,0,0.10)] border-[rgba(29,209,0,0.40)] rounded-xl px-6"
           >
             <p class="text-lg md:text-xl text-[#1DD100] font-bold">Bus</p>
             <img src="images/bus-icon.png" alt="" />
@@ -156,7 +165,7 @@
           class="flex flex-col md:flex-row justify-center items-center mb-14 gap-12"
         >
           <div
-            class="flex justify-around items-center bg-[#FFBF0F] rounded-3xl px-12"
+            class="flex flex-1 justify-around items-center bg-[#FFBF0F] rounded-3xl px-12"
           >
             <div class="font-inter text-[rgba(3,7,18,0.80)]">
               <h3 class="text-4xl font-black">15% OFF</h3>
@@ -178,7 +187,7 @@
             </div>
           </div>
           <div
-            class="flex justify-around items-center bg-[#F78C9C] rounded-3xl px-12"
+            class="flex flex-1 justify-around items-center bg-[#F78C9C] rounded-3xl px-12"
           >
             <div class="font-inter text-[rgba(3,7,18,0.80)]">
               <h3 class="text-4xl font-black">20% OFF</h3>
@@ -208,25 +217,455 @@
           </button>
         </div>
       </section>
-    </main>
-    <footer class="bg-[#030712] mt-32">
-      <div class="container mx-auto p-10 md:p-24">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div class="space-y-4">
-            <h2 class="text-4xl text-white font-extrabold font-raleway">FA-Ticket</h2>
-            <p class="text-lg text-[rgba(255,255,255,0.80)] font-inter">FA-Ticket is a digital platform to make your<br> daily commuting better.</p>
+
+      <!-- ticket booking section -->
+      <section
+        class="bg-[#F7F8F8] rounded-t-[88px] border-t-2 border-[#1DD100]"
+      >
+        <div class="container mx-auto p-5 md:p-10 lg:p-20">
+          <div class="text-center space-y-6">
+            <h2 class="text-4xl text-[#030712] font-bold font-raleway">
+              FA Paribahan
+            </h2>
+            <p class="text-lg text-[rgba(3,7,18,0.60)] font-inter">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined.
+            </p>
           </div>
-          <div class="space-y-5">
-            <p class="text-xl text-white font-semibold font-raleway">Download our app</p>
-            <img src="images/playstore.png" alt="">
+          <!-- information of ticket -->
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center bg-white rounded-3xl mt-12 px-8 gap-5"
+          >
+            <div class="flex-1">
+              <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+                <div class="flex justify-center items-center gap-3 space-y-3">
+                  <div>
+                    <img src="images/bus-logo.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 class="text-3xl text-[#030712] font-bold font-raleway">
+                      Greenline Paribahan
+                    </h3>
+                    <p>Coach-009-WEB ! AC_Business</p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-center items-center gap-2 bg-[rgba(29,209,0,0.15)] rounded-xl p-4"
+                >
+                  <div><img src="images/seat-green.png" alt="" /></div>
+                  <!-- available seats -->
+                  <div>
+                    <p class="text-lg text-[#1DD100] font-medium font-inter">
+                      40 Seats left
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-[#F7F8F8] rounded-3xl p-8 mt-6">
+                <div class="flex justify-between items-center">
+                  <p
+                    class="text-lg text-[rgba(3,7,18,0.60)] font-semibold font-raleway"
+                  >
+                    Route
+                  </p>
+                  <h4 class="text-lg text-[#030712] font-semibold font-raleway">
+                    Dhaka - Sylhet
+                  </h4>
+                </div>
+                <div
+                  class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-6 mb-6"
+                ></div>
+                <div class="flex justify-between items-center">
+                  <p
+                    class="text-lg text-[rgba(3,7,18,0.60)] font-semibold font-raleway"
+                  >
+                    Departure Time
+                  </p>
+                  <h4 class="text-lg text-[#030712] font-semibold font-raleway">
+                    9:00 PM
+                  </h4>
+                </div>
+                <div
+                  class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-6 mb-6"
+                ></div>
+                <div class="flex flex-col lg:flex-row gap-5 justify-between">
+                  <div class="p-2 lg:p-4 bg-[rgba(3,7,18,0.05)] rounded-xl">
+                    <p class="text-[rgba(3,7,18,0.80)] font-medium font-inter">
+                      Boarding Point - Laxmipur
+                    </p>
+                  </div>
+                  <div class="p-2 lg:p-4 bg-[rgba(3,7,18,0.05)] rounded-xl">
+                    <p class="text-[rgba(3,7,18,0.80)] font-medium font-inter">
+                      Dropping Point - Bogura
+                    </p>
+                  </div>
+                  <div class="p-2 lg:p-4 bg-[rgba(3,7,18,0.05)] rounded-xl">
+                    <p class="text-[rgba(3,7,18,0.80)] font-medium font-inter">
+                      Est. Time - 11 Hour
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden lg:flex">
+              <img src="images/info-devider.png" alt="" />
+            </div>
+            <div
+              class="flex flex-col justify-center items-center font-raleway space-y-6"
+            >
+              <div>
+                <img src="images/fare.png" alt="" />
+              </div>
+              <h3 class="text-3xl text-[#030712] font-bold">550 Taka</h3>
+              <p class="text-2xl text-[rgba(3,7,18,0.60)] font-semibold">
+                Per Seat
+              </p>
+            </div>
+          </div>
+          <!-- seat selection area -->
+          <div
+            class="flex flex-col lg:flex-row gap-10 bg-white rounded-3xl mt-7 p-8"
+          >
+            <div class="">
+              <h2 class="text-2xl text-[#030712] font-semibold font-raleway">
+                Select Your Seat
+              </h2>
+              <div
+                class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-6 mb-6"
+              ></div>
+              <div class="flex justify-between">
+                <div class="flex justify-center items-center gap-2">
+                  <img src="images/seat-gray.png" alt="" />
+                  <p>Available</p>
+                </div>
+                <div class="flex justify-center items-center gap-2">
+                  <img src="images/seat-green-filled.png" alt="" />
+                  <p>Selected</p>
+                </div>
+              </div>
+              <div
+                class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-6 mb-6"
+              ></div>
+
+              <!-- seat plan -->
+              <div class="grid grid-cols-5 gap-8 text-center">
+                <div class="col-start-5 col-span-1">
+                  <img
+                    class="bg-[rgba(3,7,18,0.10)] py-4 px-2 md:px-4 lg:px-9 rounded-xl"
+                    src="images/steering-wheel.png"
+                    alt=""
+                  />
+                </div>
+                <!-- A -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">A</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">A1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">A2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">A3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">A4</p>
+                </div>
+                <!-- B -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">B</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">B1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">B2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">B3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">B4</p>
+                </div>
+                <!-- C -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">C</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">C1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">C2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">C3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">C4</p>
+                </div>
+                <!-- D -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">D</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">D1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">D2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">D3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">D4</p>
+                </div>
+                <!-- E -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">E</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">E1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">E2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">E3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">E4</p>
+                </div>
+                <!-- F -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">F</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">F1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">F2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">F3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">F4</p>
+                </div>
+                <!-- G -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">G</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">G1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">G2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">G3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">G4</p>
+                </div>
+                <!-- H -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">H</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">H1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">H2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">H3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">H4</p>
+                </div>
+                <!-- I -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">I</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">I1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">I2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">I3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">I4</p>
+                </div>
+                <!-- J -->
+                <div class="max-w-[110px]">
+                  <p class="py-4">J</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">J1</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">J2</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">J3</p>
+                </div>
+                <div class="max-w-[110px]">
+                  <p class="bg-[#F7F8F8] rounded-xl py-4">J4</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="hidden md:flex border-dashed border-r-2 border-[rgba(3,7,18,0.20)] ml-8 mr-8"
+            ></div>
+
+            <div class="flex-1">
+              <!-- price calculation -->
+            <div class="">
+              <h2 class="text-2xl text-[#030712] font-semibold font-raleway">
+                Select Your Seat
+              </h2>
+              <div
+                class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-6 mb-6"
+              ></div>
+              <div class="bg-[#F7F8F8] rounded-xl p-4 lg:p-8 font-inter">
+                <div class="flex justify-between">
+                  <h3>Seat <span>2</span></h3>
+                  <h3>Class</h3>
+                  <h3>Price</h3>
+                </div>
+                <div
+                  class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-4 mb-4"
+                ></div>
+                <div id="ticket-details" class="space-y-4">
+                  <li>
+                    <p>C2</p>
+                    <p>Economy</p>
+                    <p>550</p>
+                  </li>
+                  <li>
+                    <p>C1</p>
+                    <p>Economy</p>
+                    <p>550</p>
+                  </li>
+                  
+                </div>
+                <div
+                  class="border-b-2 border-[rgba(3,7,18,0.20)] mt-4 mb-4"
+                ></div>
+                <!-- total price -->
+                <div class="flex justify-between mb-4">
+                  <p>Total Price</p>
+                  <p>BDT 1100</p>
+                </div>
+                <!-- apply coupon code -->
+                <div class="relative mb-6">
+                  <input
+                    type="text"
+                    placeholder="Have any coupon?"
+                    class="p-5 w-full border-none rounded-xl outline-[#1DD100]"
+                  />
+                  <button
+                    class="btn absolute top-2 bottom-2 right-2 px-4 py-2 bg-[#1DD100] text-white rounded-lg"
+                  >
+                    Apply
+                  </button>
+                </div>
+                <!-- grand total -->
+                <div class="flex justify-between">
+                  <p>Grand Total</p>
+                  <p>BDT 1100</p>
+                </div>
+              </div>
+            </div>
+            <!-- passenger information -->
+            <div>
+              <label class="form-control w-full mb-4">
+                <div class="label">
+                  <span class="label-text">Passenger Name*</span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <label class="form-control w-full mb-4">
+                <div class="label">
+                  <span class="label-text">Phone Number*</span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter your phone number"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <label class="form-control w-full mb-8">
+                <div class="label">
+                  <span class="label-text">Email ID</span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter your email id"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <button class="btn w-full bg-[#1DD100] rounded-2xl text-white">Next</button>
+            </div>
+            <div class="flex justify-around mt-6">
+              <p class="underline"><a href="">Terms and Conditions</a></p>
+              <p class="underline"><a href="">Cancellation Policy</a></p>
+            </div>
+            </div>
           </div>
         </div>
-        <div class="border-dashed border-b border-b-[rgba(255,255,255,0.30)] mt-12 mb-8"></div>
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6 ">
-          <div>
-            <p class="text-[rgba(255,255,255,0.70)] font-inter">&copy; All Rights Reserved, FA-Ticket services limited.2024</p>
+      </section>
+    </main>
+    <footer class="bg-[#030712] mt-32">
+      <div class="container mx-auto p-10 md:p-20">
+        <div
+          class="flex flex-col md:flex-row justify-between gap-6 text-center md:text-left"
+        >
+          <div class="space-y-4">
+            <h2 class="text-4xl text-white font-extrabold font-raleway">
+              FA-Ticket
+            </h2>
+            <p class="text-lg text-[rgba(255,255,255,0.80)] font-inter">
+              FA-Ticket is a digital platform to make your<br />
+              daily commuting better.
+            </p>
           </div>
-          <div class="flex flex-col md:flex-row justify-between items-center text-white font-medium font-inter space-x-8">
+          <div class="space-y-5">
+            <p class="text-xl text-white font-semibold font-raleway">
+              Download our app
+            </p>
+            <div class="flex justify-center">
+              <img src="images/google-play.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-dashed border-b border-b-[rgba(255,255,255,0.30)] mt-12 mb-8"
+        ></div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div>
+            <p
+              class="text-[rgba(255,255,255,0.70)] font-inter text-center md:text-left"
+            >
+              &copy; All Rights Reserved, FA-Ticket services limited 2024
+            </p>
+          </div>
+          <div
+            class="flex flex-col md:flex-row justify-between items-center text-white font-medium font-inter md:space-x-8"
+          >
             <p><a href="">Terms & condition</a></p>
             <p><a href="">Return & refund policy</a></p>
             <p><a href="">Privacy policy</a></p>
