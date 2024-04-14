@@ -115,6 +115,7 @@
                 .
               </p>
               <button
+                id="scroll-button"
                 class="btn bg-[#1DD100] border-none rounded-xl text-[#030712] font-bold font-raleway"
               >
                 Buy Tickets
@@ -220,9 +221,10 @@
 
       <!-- ticket booking section -->
       <section
+        id="ticket-booking-section"
         class="bg-[#F7F8F8] rounded-t-[88px] border-t-2 border-[#1DD100]"
       >
-        <div class="container mx-auto p-5 md:p-10 lg:p-20">
+        <div class="container mx-auto px-2 py-10 md:p-10 lg:p-20">
           <div class="text-center space-y-6">
             <h2 class="text-4xl text-[#030712] font-bold font-raleway">
               FA Paribahan
@@ -237,7 +239,9 @@
             class="flex flex-col lg:flex-row justify-between items-center bg-white rounded-3xl mt-12 px-8 gap-5"
           >
             <div class="flex-1">
-              <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+              <div
+                class="flex flex-col md:flex-row gap-4 justify-between items-center"
+              >
                 <div class="flex justify-center items-center gap-3 space-y-3">
                   <div>
                     <img src="images/bus-logo.png" alt="" />
@@ -256,7 +260,7 @@
                   <!-- available seats -->
                   <div>
                     <p class="text-lg text-[#1DD100] font-medium font-inter">
-                      40 Seats left
+                      <span id="total-seat">40</span> Seats left
                     </p>
                   </div>
                 </div>
@@ -338,11 +342,17 @@
               <div class="flex justify-between">
                 <div class="flex justify-center items-center gap-2">
                   <img src="images/seat-gray.png" alt="" />
-                  <p>Available</p>
+                  <p
+                    class="text-lg text-[rgba(3,7,18,0.50)] font-medium font-inter"
+                  >
+                    Available
+                  </p>
                 </div>
                 <div class="flex justify-center items-center gap-2">
                   <img src="images/seat-green-filled.png" alt="" />
-                  <p>Selected</p>
+                  <p class="text-lg text-[#1DD100] font-medium font-inter">
+                    Selected
+                  </p>
                 </div>
               </div>
               <div
@@ -350,7 +360,9 @@
               ></div>
 
               <!-- seat plan -->
-              <div class="grid grid-cols-5 gap-8 text-center">
+              <div
+                class="grid grid-cols-5 gap-8 text-center text-lg text-[rgba(3,7,18,0.50)] font-medium font-inter"
+              >
                 <div class="col-start-5 col-span-1">
                   <img
                     class="bg-[rgba(3,7,18,0.10)] py-4 px-2 md:px-4 lg:px-9 rounded-xl"
@@ -363,160 +375,160 @@
                   <p class="py-4">A</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">A1</p>
+                  <p onclick="selectedSeat()"  id="A1" class="bg-[#F7F8F8] rounded-xl py-4">A1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">A2</p>
+                  <p onclick="selectedSeat()"  id="A2" class="bg-[#F7F8F8] rounded-xl py-4">A2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">A3</p>
+                  <p onclick="selectedSeat()" id="A3" class="bg-[#F7F8F8] rounded-xl py-4">A3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">A4</p>
+                  <p onclick="selectedSeat()" id="A4" class="bg-[#F7F8F8] rounded-xl py-4">A4</p>
                 </div>
                 <!-- B -->
                 <div class="max-w-[110px]">
                   <p class="py-4">B</p>
                 </div>
-                <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">B1</p>
+                <div  class="max-w-[110px]">
+                  <p onclick="selectedSeat()" id="B1" class="bg-[#F7F8F8] rounded-xl py-4">B1</p>
                 </div>
-                <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">B2</p>
+                <div  class="max-w-[110px]">
+                  <p onclick="selectedSeat()" id="B2" class="bg-[#F7F8F8] rounded-xl py-4">B2</p>
                 </div>
-                <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">B3</p>
+                <div  class="max-w-[110px]">
+                  <p onclick="selectedSeat()" id="B3" class="bg-[#F7F8F8] rounded-xl py-4">B3</p>
                 </div>
-                <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">B4</p>
+                <div  class="max-w-[110px]">
+                  <p onclick="selectedSeat()" id="B4" class="bg-[#F7F8F8] rounded-xl py-4">B4</p>
                 </div>
                 <!-- C -->
                 <div class="max-w-[110px]">
                   <p class="py-4">C</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">C1</p>
+                  <p onclick="selectedSeat()" id="C1" class="bg-[#F7F8F8] rounded-xl py-4">C1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">C2</p>
+                  <p onclick="selectedSeat()" id="C2" class="bg-[#F7F8F8] rounded-xl py-4">C2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">C3</p>
+                  <p onclick="selectedSeat()" id="C3" class="bg-[#F7F8F8] rounded-xl py-4">C3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">C4</p>
+                  <p onclick="selectedSeat()" id="C4" class="bg-[#F7F8F8] rounded-xl py-4">C4</p>
                 </div>
                 <!-- D -->
                 <div class="max-w-[110px]">
                   <p class="py-4">D</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">D1</p>
+                  <p onclick="selectedSeat()" id="D1" class="bg-[#F7F8F8] rounded-xl py-4">D1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">D2</p>
+                  <p onclick="selectedSeat()" id="D2" class="bg-[#F7F8F8] rounded-xl py-4">D2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">D3</p>
+                  <p onclick="selectedSeat()" id="D3" class="bg-[#F7F8F8] rounded-xl py-4">D3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">D4</p>
+                  <p onclick="selectedSeat()" id="D4" class="bg-[#F7F8F8] rounded-xl py-4">D4</p>
                 </div>
                 <!-- E -->
                 <div class="max-w-[110px]">
                   <p class="py-4">E</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">E1</p>
+                  <p onclick="selectedSeat()" id="E1" class="bg-[#F7F8F8] rounded-xl py-4">E1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">E2</p>
+                  <p onclick="selectedSeat()" id="E2" class="bg-[#F7F8F8] rounded-xl py-4">E2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">E3</p>
+                  <p onclick="selectedSeat()" id="E3" class="bg-[#F7F8F8] rounded-xl py-4">E3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">E4</p>
+                  <p onclick="selectedSeat()" id="E4" class="bg-[#F7F8F8] rounded-xl py-4">E4</p>
                 </div>
                 <!-- F -->
                 <div class="max-w-[110px]">
                   <p class="py-4">F</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">F1</p>
+                  <p onclick="selectedSeat()" id="F1" class="bg-[#F7F8F8] rounded-xl py-4">F1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">F2</p>
+                  <p onclick="selectedSeat()" id="F2" class="bg-[#F7F8F8] rounded-xl py-4">F2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">F3</p>
+                  <p onclick="selectedSeat()" id="F3" class="bg-[#F7F8F8] rounded-xl py-4">F3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">F4</p>
+                  <p onclick="selectedSeat()" id="F4" class="bg-[#F7F8F8] rounded-xl py-4">F4</p>
                 </div>
                 <!-- G -->
                 <div class="max-w-[110px]">
                   <p class="py-4">G</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">G1</p>
+                  <p onclick="selectedSeat()" id="G1" class="bg-[#F7F8F8] rounded-xl py-4">G1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">G2</p>
+                  <p onclick="selectedSeat()" id="G2" class="bg-[#F7F8F8] rounded-xl py-4">G2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">G3</p>
+                  <p onclick="selectedSeat()" id="G3" class="bg-[#F7F8F8] rounded-xl py-4">G3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">G4</p>
+                  <p onclick="selectedSeat()" id="G4" class="bg-[#F7F8F8] rounded-xl py-4">G4</p>
                 </div>
                 <!-- H -->
                 <div class="max-w-[110px]">
                   <p class="py-4">H</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">H1</p>
+                  <p onclick="selectedSeat()" id="H1" class="bg-[#F7F8F8] rounded-xl py-4">H1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">H2</p>
+                  <p onclick="selectedSeat()" id="H2" class="bg-[#F7F8F8] rounded-xl py-4">H2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">H3</p>
+                  <p onclick="selectedSeat()" id="H3" class="bg-[#F7F8F8] rounded-xl py-4">H3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">H4</p>
+                  <p onclick="selectedSeat()" id="H4" class="bg-[#F7F8F8] rounded-xl py-4">H4</p>
                 </div>
                 <!-- I -->
                 <div class="max-w-[110px]">
                   <p class="py-4">I</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">I1</p>
+                  <p onclick="selectedSeat()" id="I1" class="bg-[#F7F8F8] rounded-xl py-4">I1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">I2</p>
+                  <p onclick="selectedSeat()" id="I2" class="bg-[#F7F8F8] rounded-xl py-4">I2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">I3</p>
+                  <p onclick="selectedSeat()" id="I3" class="bg-[#F7F8F8] rounded-xl py-4">I3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">I4</p>
+                  <p onclick="selectedSeat()" id="I4" class="bg-[#F7F8F8] rounded-xl py-4">I4</p>
                 </div>
                 <!-- J -->
                 <div class="max-w-[110px]">
                   <p class="py-4">J</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">J1</p>
+                  <p onclick="selectedSeat()" id="J1" class="bg-[#F7F8F8] rounded-xl py-4">J1</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">J2</p>
+                  <p onclick="selectedSeat()" id="J2" class="bg-[#F7F8F8] rounded-xl py-4">J2</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">J3</p>
+                  <p onclick="selectedSeat()" id="J3" class="bg-[#F7F8F8] rounded-xl py-4">J3</p>
                 </div>
                 <div class="max-w-[110px]">
-                  <p class="bg-[#F7F8F8] rounded-xl py-4">J4</p>
+                  <p onclick="selectedSeat()" id="J4" class="bg-[#F7F8F8] rounded-xl py-4">J4</p>
                 </div>
               </div>
             </div>
@@ -527,101 +539,123 @@
 
             <div class="flex-1">
               <!-- price calculation -->
-            <div class="">
-              <h2 class="text-2xl text-[#030712] font-semibold font-raleway">
-                Select Your Seat
-              </h2>
-              <div
-                class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-6 mb-6"
-              ></div>
-              <div class="bg-[#F7F8F8] rounded-xl p-4 lg:p-8 font-inter">
-                <div class="flex justify-between">
-                  <h3>Seat <span>2</span></h3>
-                  <h3>Class</h3>
-                  <h3>Price</h3>
-                </div>
+              <div class="">
+                <h2 class="text-2xl text-[#030712] font-semibold font-raleway">
+                  Select Your Seat
+                </h2>
                 <div
-                  class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-4 mb-4"
+                  class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-6 mb-6"
                 ></div>
-                <div id="ticket-details" class="space-y-4">
-                  <li>
-                    <p>C2</p>
-                    <p>Economy</p>
-                    <p>550</p>
-                  </li>
-                  <li>
-                    <p>C1</p>
-                    <p>Economy</p>
-                    <p>550</p>
-                  </li>
-                  
-                </div>
-                <div
-                  class="border-b-2 border-[rgba(3,7,18,0.20)] mt-4 mb-4"
-                ></div>
-                <!-- total price -->
-                <div class="flex justify-between mb-4">
-                  <p>Total Price</p>
-                  <p>BDT 1100</p>
-                </div>
-                <!-- apply coupon code -->
-                <div class="relative mb-6">
-                  <input
-                    type="text"
-                    placeholder="Have any coupon?"
-                    class="p-5 w-full border-none rounded-xl outline-[#1DD100]"
-                  />
-                  <button
-                    class="btn absolute top-2 bottom-2 right-2 px-4 py-2 bg-[#1DD100] text-white rounded-lg"
+                <div class="bg-[#F7F8F8] rounded-xl p-4 lg:p-8 font-inter">
+                  <div class="flex justify-between">
+                    <div class="flex justify-center items-center gap-1">
+                      <h3 class="text-[#030712] font-medium">Seat</h3>
+                      <h4 id="selected-seat"
+                        class="text-xs text-white px-2 bg-[#1DD100] rounded-2xl"
+                      >
+                        0
+                      </h4>
+                    </div>
+                    <h3 class="text-[#030712] font-medium">Class</h3>
+                    <h3 class="text-[#030712] font-medium">Price</h3>
+                  </div>
+                  <div
+                    class="border-dashed border-b-2 border-[rgba(3,7,18,0.20)] mt-4 mb-4"
+                  ></div>
+                  <div id="ticket-details" class="space-y-4 font-inter">
+                    
+                  </div>
+                  <div
+                    class="border-b-2 border-[rgba(3,7,18,0.20)] mt-4 mb-4"
+                  ></div>
+                  <!-- total price -->
+                  <div
+                    class="flex justify-between mb-4 text-[#030712] font-medium font-inter"
                   >
-                    Apply
-                  </button>
-                </div>
-                <!-- grand total -->
-                <div class="flex justify-between">
-                  <p>Grand Total</p>
-                  <p>BDT 1100</p>
+                    <p>Total Price</p>
+                    <p>BDT <span id="total-price">0</span></p>
+                  </div>
+                  <!-- apply coupon code -->
+                  <div class="relative mb-6 font-inter">
+                    <input
+                      type="text"
+                      placeholder="Have any coupon?"
+                      class="text-sm text-[rgba(3,7,18,0.40)] p-5 w-full border-none rounded-xl outline-[#1DD100]"
+                    />
+                    <button
+                      disabled
+                      class="btn font-semibold absolute top-2 bottom-2 right-2 px-4 py-2 bg-[#1DD100] text-white rounded-lg"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                  <!-- grand total -->
+                  <div
+                    class="flex justify-between text-[#030712] font-medium font-inter"
+                  >
+                    <p>Grand Total</p>
+                    <p>BDT <span id="grand-total">0</span></p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- passenger information -->
-            <div>
-              <label class="form-control w-full mb-4">
-                <div class="label">
-                  <span class="label-text">Passenger Name*</span>
-                </div>
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                  class="input input-bordered w-full"
-                />
-              </label>
-              <label class="form-control w-full mb-4">
-                <div class="label">
-                  <span class="label-text">Phone Number*</span>
-                </div>
-                <input
-                  type="text"
-                  placeholder="Enter your phone number"
-                  class="input input-bordered w-full"
-                />
-              </label>
-              <label class="form-control w-full mb-8">
-                <div class="label">
-                  <span class="label-text">Email ID</span>
-                </div>
-                <input
-                  type="text"
-                  placeholder="Enter your email id"
-                  class="input input-bordered w-full"
-                />
-              </label>
-              <button class="btn w-full bg-[#1DD100] rounded-2xl text-white">Next</button>
-            </div>
-            <div class="flex justify-around mt-6">
-              <p class="underline"><a href="">Terms and Conditions</a></p>
-              <p class="underline"><a href="">Cancellation Policy</a></p>
-            </div>
+              <!-- passenger information -->
+              <div>
+                <label class="form-control w-full mt-6 mb-4">
+                  <div class="label">
+                    <span
+                      class="label-text text-[#030712] font-semibold font-inter"
+                      >Passenger Name*</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    class="input input-bordered w-full text-[rgba(3,7,18,0.40)] font-inter"
+                  />
+                </label>
+                <label class="form-control w-full mb-4">
+                  <div class="label">
+                    <span
+                      class="label-text text-[#030712] font-semibold font-inter"
+                      >Phone Number*</span
+                    >
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="Enter your phone number"
+                    class="input input-bordered w-full text-[rgba(3,7,18,0.40)] font-inter"
+                  />
+                </label>
+                <label class="form-control w-full mb-8">
+                  <div class="label">
+                    <span
+                      class="label-text text-[#030712] font-semibold font-inter"
+                      >Email ID</span
+                    >
+                  </div>
+                  <input
+                    type="email"
+                    placeholder="Enter your email id"
+                    class="input input-bordered w-full text-[rgba(3,7,18,0.40)] font-inter"
+                  />
+                </label>
+                <button
+                  disabled
+                  class="btn w-full bg-[#1DD100] rounded-2xl text-white text-xl font-extrabold font-raleway"
+                >
+                  Next
+                </button>
+              </div>
+              <div
+                class="flex justify-around mt-6 text-[rgba(3,7,18,0.60)] font-inter"
+              >
+                <p class="underline underline-offset-4">
+                  <a href="">Terms and Conditions</a>
+                </p>
+                <p class="underline underline-offset-4">
+                  <a href="">Cancellation Policy</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
