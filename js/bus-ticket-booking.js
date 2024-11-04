@@ -153,8 +153,10 @@ nextButtonElement.addEventListener("click", function () {
   document.getElementById("total-price").innerText = "0";
   // update grand total
   document.getElementById("grand-total").innerText = "0";
-  // update passenger phone number
+  // update passenger phone number, email & name
   document.getElementById("passenger-phone-number").value = "";
+  document.getElementById("passenger-email").value = "";
+  document.getElementById("passenger-name").value = "";
   // disable next button
   document.getElementById("next-button").setAttribute("disabled", true);
 });
